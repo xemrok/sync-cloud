@@ -1,0 +1,207 @@
+/** Table classes  **/
+.table-container {
+    overflow: auto;
+}
+
+.table {
+    width: 100%;
+    position: relative;
+    border-spacing: 0;
+    border-collapse: separate;
+    text-align: left;
+    background-color: var(--white);
+    font-size: 14px;
+}
+
+.table.without-lines tbody th,
+.table.without-lines thead th,
+.table.without-lines tbody td,
+.table.without-lines thead td {
+    border-bottom: none;
+}
+
+.table.without-lines thead th,
+.table.without-lines thead td {
+    border-top: none;
+}
+
+.table.card th {
+    border-top: none;
+}
+
+.table thead tr th {
+    top: 0;
+    color: var(--gray);
+    font-weight: 400;
+    background-color: var(--white);
+    line-height: 26px;
+}
+
+.table tbody {
+    position: relative;
+}
+
+.table tbody th,
+.table thead th,
+.table tbody td,
+.table thead td {
+    border-bottom: 1px solid var(--gray-border);
+}
+
+.table thead th,
+.table thead td {
+    border-top: 1px solid var(--gray-border);
+}
+
+.table tr {
+    height: 36px;
+}
+
+.table tr > th,
+.table tr > td {
+    padding-left: 20px;
+    font-weight: normal;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+.table tr > th:last-child,
+.table tr > td:last-child {
+    padding-right: 20px;
+}
+
+.table tr .actions {
+    text-align: right;
+}
+
+.table tr .actions > * {
+    vertical-align: middle;
+}
+
+.table tr .checkbox label {
+    padding-left: 18px;
+}
+
+.table-embedded {
+    border-radius: 0;
+}
+
+.table-embedded thead tr th,
+.table-embedded tbody tr th,
+.table-embedded thead tr:first-child th,
+.table-embedded tbody tr:first-child th,
+.table-embedded thead tr td,
+.table-embedded tbody tr td,
+.table-embedded thead tr:first-child td,
+.table-embedded tbody tr:first-child td,
+.table-embedded thead tr th:first-child,
+.table-embedded tbody tr th:first-child,
+.table-embedded thead tr:first-child th:first-child,
+.table-embedded tbody tr:first-child th:first-child,
+.table-embedded thead tr td:first-child,
+.table-embedded tbody tr td:first-child,
+.table-embedded thead tr:first-child td:first-child,
+.table-embedded tbody tr:first-child td:first-child,
+.table-embedded thead tr th:last-child,
+.table-embedded tbody tr th:last-child,
+.table-embedded thead tr:first-child th:last-child,
+.table-embedded tbody tr:first-child th:last-child,
+.table-embedded thead tr td:last-child,
+.table-embedded tbody tr td:last-child,
+.table-embedded thead tr:first-child td:last-child,
+.table-embedded tbody tr:first-child td:last-child {
+    border-right: none;
+    border-left: none;
+    border-radius: 0;
+}
+
+.table-embedded thead tr:last-child td,
+.table-embedded tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.table-container {
+    box-sizing: border-box;
+    overflow: auto;
+}
+
+.table-container .table thead tr th {
+    position: sticky;
+}
+
+.table .empty-string {
+    height: 112px;
+}
+
+.table .empty-string td {
+    text-align: center;
+}
+
+.table .table-loader {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+
+.table .table-loader > :first-child {
+    margin: auto;
+    border-bottom: none;
+}
+
+.table .table-loader td > :first-child {
+    position: initial;
+    transform: initial;
+}
+
+.table [data-sort-field] {
+    cursor: pointer;
+    padding-right: 24px;
+    position: relative;
+}
+
+.table .sortable-pull-right[data-sort-field].sortable-asc:after,
+.table .sortable-pull-right[data-sort-field].sortable-desc:after {
+    content: '';
+    display: inline-block;
+    top: 50%;
+    transform: translateY(3px);
+    width: 20px;
+    height: 16px;
+    margin: 0 4px;
+}
+
+.table .sortable-pull-left[data-sort-field].sortable-asc:before,
+.table .sortable-pull-left[data-sort-field].sortable-desc:before {
+    content: '';
+    display: inline-block;
+    top: 50%;
+    transform: translateY(3px);
+    width: 20px;
+    height: 16px;
+    margin: 0 4px;
+}
+
+.table .sortable-pull-right[data-sort-field].sortable-pull-left.sortable-asc:after,
+.table .sortable-pull-right[data-sort-field].sortable-pull-left.sortable-desc:after {
+    left: -8px;
+}
+
+.table .sortable-pull-right[data-sort-field].sortable-asc:after {
+    background-image: url("data:image/svg+xml,%3Csvg width='20' height='16' viewBox='0 0 26 16' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9 5H18V7H9V5ZM9 9H16V11H9V9ZM9 1H20V3H9V1ZM9 13H14V15H9V13ZM3 16H5V4H8L4 0L0 4H3V16Z' fill='%23888'/%3E%3C/svg%3E%0A");
+}
+
+.table .sortable-pull-right[data-sort-field].sortable-desc:after {
+    background-image: url("data:image/svg+xml,%3Csvg width='20' height='16' viewBox='0 0 26 16' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4 16L8 12H5V0H3V12H0L4 16ZM9 4H18V6H9V4ZM9 8H16V10H9V8ZM9 0H20V2H9V0ZM9 12H14V14H9V12Z' fill='%23888'/%3E%3C/svg%3E%0A");
+}
+
+.table .sortable-pull-left[data-sort-field].sortable-asc:before {
+    background-image: url("data:image/svg+xml,%3Csvg width='20' height='16' viewBox='0 0 26 16' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9 5H18V7H9V5ZM9 9H16V11H9V9ZM9 1H20V3H9V1ZM9 13H14V15H9V13ZM3 16H5V4H8L4 0L0 4H3V16Z' fill='%23888'/%3E%3C/svg%3E%0A");
+}
+
+.table .sortable-pull-left[data-sort-field].sortable-desc:before {
+    background-image: url("data:image/svg+xml,%3Csvg width='20' height='16' viewBox='0 0 26 16' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4 16L8 12H5V0H3V12H0L4 16ZM9 4H18V6H9V4ZM9 8H16V10H9V8ZM9 0H20V2H9V0ZM9 12H14V14H9V12Z' fill='%23888'/%3E%3C/svg%3E%0A");
+}
+
+/************************************************************************/

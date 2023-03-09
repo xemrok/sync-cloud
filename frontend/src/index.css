@@ -1,0 +1,32 @@
+@import './common/styles/colors.css';
+@import './common/styles/styles.css';
+
+body {
+  margin: 0;
+  background: var(--background);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+@media (max-width: 900px) {
+  html.noScroll {
+    position: fixed;
+    overflow: hidden;
+  }
+
+  @media (pointer: coarse) {
+    html.noScroll {
+      position: fixed;
+      overflow-y: scroll;
+      width: 100%;
+    }
+  }
+}
