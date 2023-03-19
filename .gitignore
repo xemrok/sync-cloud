@@ -59,3 +59,8 @@
 *.exe
 *.out
 *.app
+
+# -----------Backend_2.0-------------
+/backend_2.0/.vscode
+/backend_2.0/build
+/backend_2.0/utility/temp

@@ -125,5 +125,5 @@ class Http {
 }
 
 export const api = new Http({
-    baseUrl: process.env.REACT_APP_ORIGIN_BACKEND_URL + '/api',
+    baseUrl: process.env.REACT_APP_ORIGIN_BACKEND_URL + '',
 });

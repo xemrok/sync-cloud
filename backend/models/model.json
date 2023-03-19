@@ -5,5 +5,8 @@
     "dbname": "sync_cloud",
     "user": "xemrok",
     "passwd": "1111",
-    "tables": []
+    "tables": [],
+    "restful_api_controllers": {
+        "enabled": true
+    }
 }

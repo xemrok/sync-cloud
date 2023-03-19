@@ -23,8 +23,8 @@ add_executable(${PROJECT_NAME} main.cc)
 
 # ##############################################################################
 # If you include the drogon source code locally in your project, use this method
-# to add drogon 
-# add_subdirectory(drogon) 
+# to add drogon
+# add_subdirectory(drogon)
 # target_link_libraries(${PROJECT_NAME} PRIVATE drogon)
 #
 # and comment out the following lines
@@ -70,8 +70,15 @@ target_sources(${PROJECT_NAME}
                ${PLUGIN_SRC}
                ${MODEL_SRC})
 # ##############################################################################
-# uncomment the following line for dynamically loading views 
+# uncomment the following line for dynamically loading views
 # set_property(TARGET ${PROJECT_NAME} PROPERTY ENABLE_EXPORTS ON)
+
+# ##############################################################################
+# Adding the BCrypt library
+
+include_directories(./libs/Bcrypt.cpp)
+add_subdirectory(./libs/Bcrypt.cpp)
+target_link_libraries(${PROJECT_NAME} PRIVATE bcrypt)
 
 # ##############################################################################
 

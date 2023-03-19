@@ -1,13 +1,19 @@
 #include <drogon/drogon.h>
 
-int main() {
-    std::cout << "Server started" << "\n";
+using namespace drogon;
 
-    //Set HTTP listener address and port
-    drogon::app().addListener("0.0.0.0",1024);
-    //Load config file
-    //drogon::app().loadConfigFile("../config.json");
-    //Run HTTP framework,the method will block in the internal event loop
-    drogon::app().run();
+int main()
+{
+    std::cout << "Server running on port 1024\n";
+
+    app()
+        .registerPostHandlingAdvice(
+            [](const HttpRequestPtr &req, const HttpResponsePtr &resp)
+            {
+                resp->addHeader("Access-Control-Allow-Origin", "http://localhost:3000");
+                resp->addHeader("Access-Control-Allow-Methods", "OPTIONS,HEAD,GET,POST,PUT,DELETE");
+            })
+        .loadConfigFile("../config.json")
+        .run();
     return 0;
 }
