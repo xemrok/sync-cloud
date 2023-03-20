@@ -67,3 +67,14 @@ oatpp::Object<UserDto> UserService::getUserById(const oatpp::UInt32 &id)
 
     return result[0];
 }
+
+oatpp::Object<StatusDto> UserService::deleteSessionById(const oatpp::UInt32 &id, const oatpp::String &token) {
+  auto dbResult = m_database->deleteSessionById(id, token);
+  OATPP_ASSERT_HTTP(dbResult->isSuccess(), Status::CODE_500, dbResult->getErrorMessage());
+
+  auto status = StatusDto::createShared();
+  status->status = "OK";
+  status->code = 200;
+  status->message = "User successfully logged out";
+  return status;
+}

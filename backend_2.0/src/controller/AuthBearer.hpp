@@ -15,13 +15,16 @@ class AuthBearerObject : public UserDto, public AuthorizationObject
 {
 
 public:
-    AuthBearerObject(const oatpp::Object<UserDto> user)
+    oatpp::String token;
+
+    AuthBearerObject(const oatpp::Object<UserDto> user, const oatpp::String &_token)
     {
         _id = user->_id;
         email = user->email;
         name = user->name;
         updated_at = user->updated_at;
         created_at = user->created_at;
+        token = *_token;
     }
 };
 
@@ -48,7 +51,7 @@ public:
 
             auto result = dbResult->fetch<oatpp::Vector<oatpp::Object<UserDto>>>();
             OATPP_ASSERT_HTTP(result->size() == 1, Status::CODE_500, "Unknown error");
-            return std::make_shared<AuthBearerObject>(result[0]);
+            return std::make_shared<AuthBearerObject>(result[0], token);
         }
 
         return nullptr;

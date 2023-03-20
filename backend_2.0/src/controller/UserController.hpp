@@ -87,6 +87,25 @@ public:
   {
     return createDtoResponse(Status::CODE_200, m_userService.getUserById(authUser->_id));
   }
+
+  /*### GET /users/logout ###*/
+  ENDPOINT_INFO(logout)
+  {
+    info->summary = "Delete session";
+
+    info->addResponse<Object<SessionUserDto>>(Status::CODE_200, "application/json");
+    info->addResponse<Object<StatusDto>>(Status::CODE_401, "application/json");
+    info->addResponse<Object<StatusDto>>(Status::CODE_500, "application/json");
+
+    info->headers["token"].description = "User Identifier";
+    info->addSecurityRequirement("token");
+  }
+  ADD_CORS(logout)
+  ENDPOINT("GET", "/users/logout", logout,
+           AUTHORIZATION(std::shared_ptr<AuthBearerObject>, authUser, m_authHandler))
+  {
+    return createDtoResponse(Status::CODE_200, m_userService.deleteSessionById(authUser->_id, authUser->token));
+  }
 };
 
 #include OATPP_CODEGEN_BEGIN(ApiController)

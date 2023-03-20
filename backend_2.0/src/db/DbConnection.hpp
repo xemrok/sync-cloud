@@ -60,8 +60,14 @@ public:
             PREPARE(true),
             PARAM(oatpp::String, token))
 
+      QUERY(deleteSessionById,
+            "DELETE FROM sessions WHERE user_id=:user_id AND token=:token;",
+            PREPARE(true),
+            PARAM(oatpp::UInt32, user_id),
+            PARAM(oatpp::String, token))
+
       /*##################### File Table #####################*/
-      //TODO ...
+      // TODO ...
 };
 
 #include OATPP_CODEGEN_END(DbClient)

@@ -23,6 +23,7 @@ public:
   oatpp::Object<UserDto> signUp(const oatpp::Object<SignUpDto> &dto);
   oatpp::Object<SessionUserDto> signIn(const oatpp::Object<SignInDto> &dto);
   oatpp::Object<UserDto> getUserById(const oatpp::UInt32 &id);
+  oatpp::Object<StatusDto> deleteSessionById(const oatpp::UInt32 &id, const oatpp::String &token);
 };
 
 #endif
