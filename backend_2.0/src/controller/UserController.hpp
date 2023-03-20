@@ -93,7 +93,7 @@ public:
   {
     info->summary = "Delete session";
 
-    info->addResponse<Object<SessionUserDto>>(Status::CODE_200, "application/json");
+    info->addResponse<Object<StatusDto>>(Status::CODE_200, "application/json");
     info->addResponse<Object<StatusDto>>(Status::CODE_401, "application/json");
     info->addResponse<Object<StatusDto>>(Status::CODE_500, "application/json");
 
