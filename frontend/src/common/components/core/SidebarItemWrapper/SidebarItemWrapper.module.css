@@ -1,0 +1,10 @@
+.sidebarBody {
+    height: 100%;
+    overflow: auto;
+    list-style-type: none;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+}

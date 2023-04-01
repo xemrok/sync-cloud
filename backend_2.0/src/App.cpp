@@ -9,6 +9,7 @@
 #include "SwaggerComponent.hpp"
 
 #include "controller/UserController.hpp"
+#include "controller/FileController.hpp"
 
 void run(const oatpp::base::CommandLineArguments &args)
 {
@@ -21,6 +22,7 @@ void run(const oatpp::base::CommandLineArguments &args)
   oatpp::web::server::api::Endpoints docEndpoints;
 
   docEndpoints.append(router->addController(UserController::createShared())->getEndpoints());
+  docEndpoints.append(router->addController(FileController::createShared())->getEndpoints());
 
   router->addController(oatpp::swagger::Controller::createShared(docEndpoints));
 

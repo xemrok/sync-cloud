@@ -1,0 +1,101 @@
+.label {
+    color: var(--gray);
+    font-size: 14px;
+    display: flex;
+    gap: 4px;
+    margin-bottom: 4px;
+}
+
+.label .mandatory {
+    color: var(--danger);
+}
+
+.input {
+    height: 38px;
+    width: 100%;
+    outline: none;
+    padding: 6px 12px;
+    box-sizing: border-box;
+    transition: 0.3s;
+    background: var(--white);
+    border: 1px solid var(--dark-gray);
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.input:focus {
+    border-color: var(--primary);
+}
+
+.input:hover {
+    border-color: var(--primary);
+}
+
+input[type='number'] {
+    -moz-appearance: textfield;
+}
+
+.fullWidth {
+    width: 100%;
+}
+
+.wrapper {
+    display: flex;
+}
+
+.error {
+    min-height: 16px;
+    color: var(--danger);
+    font-size: 14px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+input.error {
+    border: 1px solid var(--danger) !important;
+}
+
+.leftIconPosition > span {
+    left: 0;
+}
+
+.rightIconPosition > span {
+    right: 0;
+}
+
+.rightIconPosition input {
+    padding-right: 36px;
+}
+
+.leftIconPosition input {
+    padding-left: 36px;
+}
+
+.inputWithIcon {
+    position: relative;
+}
+
+.inputWithIcon > span {
+    position: absolute;
+    top: 8px;
+    padding: 0 10px;
+}
+
+.disabled {
+    cursor: not-allowed !important;
+    background-color: var(--light-gray);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    appearance: none;
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.left {
+    display: flex;
+    align-items: center;
+    min-height: 32px !important;
+}

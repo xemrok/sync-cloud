@@ -1,0 +1,33 @@
+.title {
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.body {
+    width: 300px;
+    min-width: 250px;
+    padding: 20px 16px;
+    gap: 16px;
+}
+
+.eye {
+    cursor: pointer;
+}
+
+.button {
+    min-height: 36px;
+    margin-top: 16px;
+    position: relative;
+}
+
+.actions {
+    width: auto;
+}
+
+.menuAction {
+    border: 1px solid var(--dark-gray);
+    padding: 8px;
+    font-weight: normal;
+    font-size: 16px;
+    color: var(--black);
+}

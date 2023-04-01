@@ -7,8 +7,9 @@
 
 .contentWrapper {
     display: flex;
-    width: 100%;
+    width: calc(100% - 320px); /*** (Sidebar - 256px, Padding: 64px) 256 + 64 = 320px ***/
     padding: 32px;
+    margin-left: 256px;
 }
 
 .contentContainer {
@@ -18,7 +19,7 @@
 
 @media (max-width: 900px) {
     .contentWrapper {
-        margin-left: 0;
-        width: calc(100% - 64px); /*** Padding: 64px ***/
+      margin-left: 0;
+      width: calc(100% - 64px); /*** Padding: 64px ***/
     }
 }

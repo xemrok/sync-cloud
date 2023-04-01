@@ -68,7 +68,7 @@ class Http {
             };
         }
 
-        if (!isPublic) headers.Authorization = 'Token ' + window.storage.get('indoor_access_token');
+        if (!isPublic) headers.Authorization = 'Bearer ' + window.storage.get('sync_cloud_access_token');
 
         const response = (await this.fetchRequest(url, { ...opts, headers }, retry)) as Response;
         if (response.status === 401) setTimeout(() => this.unauthorized && this.unauthorized());

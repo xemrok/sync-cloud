@@ -1,6 +1,8 @@
 import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
+import { authService } from '../../services';
+
 import { useUserContext } from '../../ContextProvider';
 
 import { PATHS } from '../../common/constants';
@@ -11,9 +13,13 @@ const Logout = () => {
   const { currentUser, setCurrentUser } = useUserContext();
 
   useEffect(() => {
-    currentUser?.logout();
-    setCurrentUser(null);
     navigate(`${PATHS.AUTH.SIGN_IN}${window.location.search}`, { replace: true });
+    authService.logout()
+      .catch(e => console.error(e))
+      .finally(() => {
+        currentUser?.logout();
+        setCurrentUser(null);
+      });
   }, []);
 
   return null;

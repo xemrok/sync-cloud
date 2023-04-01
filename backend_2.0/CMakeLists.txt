@@ -4,11 +4,15 @@ set(project_name backend)
 
 project(${project_name})
 
-set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD 17)
+
+set(CMAKE_C_FLAGS_DEBUG "-g -DDEBUG")
+set(CMAKE_CXX_FLAGS_DEBUG "-g -DDEBUG")
 
 add_library(${project_name}-lib
         src/controller/AuthBearer.hpp
         src/controller/UserController.hpp
+        src/controller/FileController.hpp
         src/db/DbConnection.hpp
         src/dto/ConfigDto.hpp
         src/dto/StatusDto.hpp

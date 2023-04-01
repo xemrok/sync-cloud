@@ -11,7 +11,9 @@ clear
 cd build
 
 echo -e "Cmake started!\n"
-cmake ..
+# cmake ..
+cmake -DCMAKE_BUILD_TYPE=Debug ..
+cmake --build .
 echo -e "\n"
 
 echo -e "Make started!\n"

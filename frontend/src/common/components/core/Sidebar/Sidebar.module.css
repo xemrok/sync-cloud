@@ -1,0 +1,25 @@
+.sidebarWrapper {
+    height: 100%;
+    width: 256px;
+    left: 0;
+    top: 56px;
+    bottom: 0;
+    background: var(--white);
+    box-shadow: 1px 0 0 var(--light-gray);
+    z-index: 9;
+    text-align: left;
+    transition: transform 200ms linear;
+    padding: 32px 16px;
+    box-sizing: border-box;
+}
+
+.sidebarWrapper.transition {
+    transform: translateX(-258px);
+}
+
+.sidebarWrapper .sidebarContent {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}

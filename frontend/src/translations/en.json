@@ -1,1 +1,15 @@
-{}
+{
+    "errors.400": "Sorry, something went wrong. Try again later.",
+    "errors.401": "Your session expired",
+    "errors.403": "Sorry, you are not allowed for that",
+    "errors.404": "Sorry, something went wrong. Try again later.",
+    "errors.409": "Sorry, something went wrong. Try again later.",
+    "errors.500": "Functionality temporarily unavailable",
+    "errors.503": "Functionality temporarily unavailable",
+    "errors.504": "Functionality temporarily unavailable",
+    "errors.BAD_PARSING": "Server response parsing error",
+    "LANG.en": "English",
+    "LANG.ru": "Russian",
+    "LANG.SHORT.en": "EN",
+    "LANG.SHORT.ru": "RU"
+}

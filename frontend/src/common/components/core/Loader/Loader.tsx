@@ -1,5 +1,6 @@
 import style from './Loader.module.css';
 
+
 export type LoaderProps = {
   size?: number;
   className?: string;

@@ -1,0 +1,72 @@
+.profileLabel {
+    display: flex;
+}
+
+.mobileProfileLabel {
+    display: none;
+}
+
+.customHeaderButton {
+    padding: 0 16px;
+}
+
+.logoutHeaderButton {
+    display: flex;
+    padding: 16px 4px;
+}
+
+.logoutHeaderButton > :first-child {
+    margin: auto 2px auto 0;
+}
+
+.logoutHeaderButton > :last-child {
+    margin: auto 0;
+}
+
+.mobileHeaderButton {
+    display: flex;
+    align-items: center;
+}
+
+.mobileHeaderButton > :last-child {
+    margin-left: 8px;
+}
+
+.mobileMenu {
+    position: absolute;
+    display: grid;
+    width: 100%;
+    left: 0;
+    text-align: left;
+    border-top: 1px solid var(--transparent-black);
+    background: linear-gradient(90deg, var(--primary) 0%, var(--black) 100%);
+    transform: scaleY(0);
+    transform-origin: 0 0;
+    transition: 0.2s ease-in-out;
+}
+
+.mobileMenu.open {
+    transform: scaleY(1);
+}
+
+.mobileMenu > :first-child {
+    text-align: left;
+}
+
+.mobileMenu > :not(:first-child) {
+    text-align: left;
+}
+
+@media (max-width: 900px) {
+    .logoutHeaderButton > :first-child {
+        display: none;
+    }
+
+    .profileLabel {
+        display: none;
+    }
+
+    .mobileProfileLabel {
+        display: initial;
+    }
+}

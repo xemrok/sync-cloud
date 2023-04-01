@@ -1,0 +1,153 @@
+.button {
+    position: relative;
+    border-radius: 4px;
+    padding: 8px 14px;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 20px;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+}
+
+.button:hover {
+    cursor: pointer;
+    filter: contrast(1.3) brightness(1.1);
+}
+
+.small {
+    padding: 0 6px;
+    font-size: 14px;
+    line-height: 18px;
+}
+
+.fullWidth {
+    width: 100%;
+}
+
+.button:first-child {
+    margin-left: 0;
+}
+
+[class*='-fill'] {
+    color: var(--white);
+    border: none;
+    font-weight: 700;
+}
+
+.primary-fill {
+    background: var(--primary);
+}
+
+.secondary-fill {
+    background: var(--secondary);
+    border: 1px solid var(--secondary);
+}
+
+.danger-fill {
+    background: var(--danger);
+    border: 1px solid var(--danger);
+}
+
+.warning-fill {
+    background: var(--warning);
+    border: 1px solid var(--warning);
+}
+
+.success-fill {
+    background: var(--success);
+    border: 1px solid var(--success);
+}
+
+.black-fill {
+    background: var(--black);
+    border: 1px solid var(--black);
+}
+
+.white-fill {
+    background: var(--white);
+    border: 1px solid var(--white);
+}
+
+.gray-fill {
+    background: var(--gray);
+    border: 1px solid var(--gray);
+}
+
+.transparent-fill {
+    background: transparent;
+}
+
+.transparent-fill:hover {
+    opacity: 0.8;
+}
+
+.primary-border {
+    border: 1px solid var(--primary);
+    color: var(--primary);
+}
+
+.secondary-border {
+    border: 1px solid var(--secondary);
+    color: var(--secondary);
+}
+
+.danger-border {
+    border: 1px solid var(--danger);
+    color: var(--danger);
+}
+
+.warning-border {
+    border: 1px solid var(--warning);
+    color: var(--warning);
+}
+
+.success-border {
+    border: 1px solid var(--success);
+    color: var(--success);
+}
+
+.black-border {
+    border: 1px solid var(--black);
+    color: var(--black);
+}
+
+.gray-border {
+    border: 1px solid var(--gray);
+    color: var(--gray);
+}
+
+.disabled-fill,
+.disabled-border {
+    color: var(--gray);
+    border: 1px solid var(--gray);
+}
+
+.disabled-fill {
+    background-color: transparent;
+    border: 1px solid var(--gray) !important;
+}
+
+.disabled-fill.transparent-fill {
+    border: none !important;
+}
+
+.primary-border:hover {
+    filter: brightness(1.3) contrast(1.3);
+}
+
+.danger-border:hover {
+    filter: brightness(2);
+}
+
+.danger-fill:hover {
+    filter: brightness(1.5);
+}
+
+[class*='disabled']:hover {
+    cursor: not-allowed;
+    filter: brightness(1) contrast(1);
+}

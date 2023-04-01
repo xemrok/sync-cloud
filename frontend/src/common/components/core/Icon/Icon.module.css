@@ -1,0 +1,62 @@
+.container {
+    display: inline-flex;
+    align-items: center;
+    align-content: center;
+}
+
+.container > svg {
+    height: 100%;
+    width: 100%;
+}
+
+.container > svg > path {
+    opacity: 1;
+}
+
+.disabled {
+    cursor: not-allowed !important;
+}
+
+.primary > svg > path {
+    fill: var(--primary);
+}
+
+.secondary > svg > path {
+    fill: var(--secondary);
+}
+
+.success > svg > path {
+    fill: var(--success);
+}
+
+.warning > svg > path {
+    fill: var(--warning);
+}
+
+.danger > svg > path {
+    fill: var(--danger);
+}
+
+.white > svg > path {
+    fill: var(--white);
+}
+
+.gray > svg > path {
+    fill: var(--gray);
+}
+
+.dark-gray > svg > path {
+    fill: var(--dark-gray);
+}
+
+.light-gray > svg > path {
+    fill: var(--light-gray);
+}
+
+.black > svg > path {
+    fill: var(--black);
+}
+
+.background > svg > path {
+    fill: var(--background);
+}

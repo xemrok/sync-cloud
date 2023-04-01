@@ -10,8 +10,8 @@ import './App.css';
 
 
 function App() {
-  const sessionToken = SessionStorage.get('indoor_access_token');
-  const localToken = LocalStorage.get('indoor_access_token');
+  const sessionToken = SessionStorage.get('sync_cloud_access_token');
+  const localToken = LocalStorage.get('sync_cloud_access_token');
 
   window.token = sessionToken || localToken;
   window.storage = localToken ? LocalStorage : SessionStorage;

@@ -1,0 +1,64 @@
+.tree {
+    display: flex;
+    gap: 16px;
+    flex-direction: column;
+}
+
+.node {
+    width: 100%;
+    min-height: 42px;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.linkNode {
+    width: 100%;
+    display: flex;
+    text-decoration: none;
+    align-items: center;
+    gap: 12px;
+}
+
+.linkNode:hover span {
+    color: var(--primary) !important;
+}
+
+.linkNode:hover span > svg > path {
+    fill: var(--primary) !important;
+}
+
+.linkNode.active span,
+.linkNode.active .linkLabel {
+    color: var(--primary);
+}
+
+.linkNode.active span > svg > path {
+    fill: var(--primary) !important;
+}
+
+.nodeButton {
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    gap: 16px;
+    padding: 0;
+    color: var(--gray);
+    background: transparent;
+    font-weight: normal;
+}
+
+.nodeButton:hover span {
+    color: var(--primary) !important;
+}
+
+.nodeButton:hover span > svg > path {
+    fill: var(--primary) !important;
+}
+
+.linkLabel {
+    font-size: 18px;
+    color: var(--gray);
+    line-height: 20px;
+}

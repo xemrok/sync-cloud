@@ -1,0 +1,50 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 8px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.list {
+    white-space: nowrap;
+    text-align: left;
+    opacity: 0.5;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.list a {
+    font-size: 16px;
+    line-height: 24px;
+    text-decoration: none;
+    color: var(--black);
+}
+
+.list:not(:last-child) a:after {
+    padding-left: 8px;
+    color: var(--black);
+    content: '/';
+}
+
+.title:last-child {
+    font-size: 24px;
+    opacity: 1;
+}
+
+.title:last-child a {
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.default {
+    cursor: default;
+}
+
+.indent {
+    margin-bottom: 24px;
+}

@@ -1,0 +1,27 @@
+.container {
+    height: 100%;
+    padding: 16px;
+    background: transparent;
+    border: none;
+    color: var(--white);
+    font-size: 14px;
+    opacity: 0.6;
+    cursor: pointer;
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.container:hover {
+    background: var(--transparent-black);
+    opacity: 1;
+}
+
+.container.active {
+    background: var(--transparent-black);
+    opacity: 1;
+}
+
+.container.active:hover {
+    opacity: 0.8;
+}
