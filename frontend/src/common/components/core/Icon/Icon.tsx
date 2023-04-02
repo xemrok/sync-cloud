@@ -16,12 +16,18 @@ import { ReactComponent as Search } from '../../../../assets/search.svg';
 import { ReactComponent as Menu } from '../../../../assets/menu.svg';
 import { ReactComponent as FolderTable } from '../../../../assets/folder-table.svg';
 import { ReactComponent as DeleteRestore } from '../../../../assets/delete-restore.svg';
+import { ReactComponent as AlertOutline } from '../../../../assets/alert-outline.svg';
+import { ReactComponent as CloudUpload } from '../../../../assets/cloud-upload.svg';
+import { ReactComponent as Logout } from '../../../../assets/logout.svg';
 
 import style from './Icon.module.css';
 
 
 export type IconTypes =
     'gear'
+    | 'logout'
+    | 'cloudUpload'
+    | 'alertOutline'
     | 'deleteRestore'
     | 'folderTable'
     | 'menu'
@@ -64,6 +70,12 @@ export type IconProps = {
 
 const iconByType = (type?: IconTypes): ReactComponentElement<any> => {
     switch (type) {
+        case 'logout':
+            return <Logout />
+        case 'cloudUpload':
+            return <CloudUpload />
+        case 'alertOutline':
+            return <AlertOutline />
         case 'deleteRestore':
             return <DeleteRestore />
         case 'folderTable':

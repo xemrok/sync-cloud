@@ -27,8 +27,7 @@ import SidebarItems, { SidebarItemsProps, TreeItem } from './core/SidebarItems/S
 import SidebarFooter from './core/SidebarFooter/SidebarFooter';
 
 /** Other **/
-//..
-
+import DeleteDialog from './other/DeleteDialog/DeleteDialog';
 
 /** Components **/
 export {
@@ -58,6 +57,7 @@ export {
     SidebarItemWrapper,
     SidebarItems,
     SidebarFooter,
+    DeleteDialog,
 };
 
 /** Component types **/

@@ -1,0 +1,15 @@
+.body {
+    min-width: 350px;
+}
+
+.action {
+    display: flex;
+    justify-content: flex-end;
+    column-gap: 16px;
+    margin-top: 16px;
+}
+
+.button {
+    min-width: 60px;
+    position: relative;
+}

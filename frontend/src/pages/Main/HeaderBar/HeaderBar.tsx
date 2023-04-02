@@ -1,9 +1,10 @@
 import { useEffect, useRef, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 
 import { useUserContext } from '../../../ContextProvider';
 import { useNotificationContext } from '../MainContextProvider';
-import { Header, HeaderButton, Icon, ProfileLabel } from '../../../common/components';
+import { Header, HeaderButton, Icon, ProfileLabel, TooltipMenu, MenuItem } from '../../../common/components';
 
 import { PATHS } from '../../../common/constants';
 
@@ -21,8 +22,9 @@ type HeaderBarProps = {
 
 const HeaderBar = ({ isOpen, onClick }: HeaderBarProps) => {
     const { t } = useTranslation();
+    const navigate = useNavigate();
     const { currentUser } = useUserContext();
-    const { count } = useNotificationContext();
+    const { count } = useNotificationContext(); // TODO add notifications
     const mouseOver = useRef<boolean>(false);
     const [visible, setVisible] = useState<boolean>(false);
 
@@ -48,19 +50,29 @@ const HeaderBar = ({ isOpen, onClick }: HeaderBarProps) => {
             )}
             rightActions={
                 <>
-                    <HeaderButton className={style.customHeaderButton}>
-                        <span className={style.profileLabel}>
-                            <ProfileLabel name={currentUser.name} fontSize={14} textColor="white" isFullName />
-                        </span>
-                        <span className={style.mobileProfileLabel}>
-                            <ProfileLabel name={currentUser.name} />
-                        </span>
-                    </HeaderButton>
-
-                    {/* <HeaderButton className={style.logoutHeaderButton} path={PATHS.LOGOUT}>
-                        <div>{t('Logout')}</div>
-                        <Icon type="logout" color="white" size={24} />
-                    </HeaderButton> */}
+                    <TooltipMenu
+                        node={
+                            <HeaderButton className={style.customHeaderButton}>
+                                <>
+                                    <span className={style.profileLabel}>
+                                        <ProfileLabel name={currentUser.name} fontSize={14} textColor="white" isFullName />
+                                    </span>
+                                    <span className={style.mobileProfileLabel}>
+                                        <ProfileLabel name={currentUser.name} />
+                                    </span>
+                                </>
+                            </HeaderButton>
+                        }
+                    >
+                        <MenuItem className={style.tooltipMenuItem}>
+                            <Icon size={22} />
+                            <span>{t('Settings')}</span>
+                        </MenuItem>
+                        <MenuItem className={style.tooltipMenuItem} onClick={() => navigate(PATHS.LOGOUT)}>
+                            <Icon type="logout" size={22}/>
+                            <span>{t('Logout')}</span>
+                        </MenuItem>
+                    </TooltipMenu>
                 </>
             }
             mobileActions={

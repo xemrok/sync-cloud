@@ -1,0 +1,19 @@
+.row {
+    cursor: pointer;
+}
+
+.row:hover {
+    background: var(--light-gray);
+}
+
+.icon {
+    width: 32px;
+}
+
+.action {
+    font-size: 14px;
+}
+
+.action > :first-child {
+    margin-right: 5px;
+}

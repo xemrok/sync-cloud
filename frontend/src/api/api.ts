@@ -92,15 +92,16 @@ class Http {
     fetchRequest = async (url: string, options: any, retry?: boolean) => {
         let error;
 
-        do {
-            try {
+        // TODO Uncomment the repetition of an unsuccessful request after the completion of work on the backend
+        // do {
+        //     try {
                 error && (await this.wait());
                 return await fetch(url, options);
-            } catch (err) {
-                error = err;
-                console.error(err);
-            }
-        } while (error && retry);
+        //     } catch (err) {
+        //         error = err;
+        //         console.error(err);
+        //     }
+        // } while (error && retry);
     };
 
     get(url: string, opts?: RequestOptions): Promise<any> {

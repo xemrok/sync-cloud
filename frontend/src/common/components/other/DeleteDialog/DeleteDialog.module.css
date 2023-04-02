@@ -1,0 +1,29 @@
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.body {
+    width: 400px;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    line-height: 24px;
+    font-size: 18px;
+}
+
+@media screen and (max-width: 900px) {
+    .body {
+        width: 100%;
+        margin: auto;
+        font-size: 16px;
+        text-align: center;
+    }
+}

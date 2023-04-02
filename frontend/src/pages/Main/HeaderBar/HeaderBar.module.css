@@ -57,6 +57,14 @@
     text-align: left;
 }
 
+.tooltipMenuItem {
+    color: var(--black);
+}
+
+.tooltipMenuItem > :first-child {
+    margin-right: 6px;
+}
+
 @media (max-width: 900px) {
     .logoutHeaderButton > :first-child {
         display: none;
